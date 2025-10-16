@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tracker — PulseForge</title>
+  <title>Tracker — FireForged</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/animations.css">
 </head>
@@ -53,6 +53,19 @@
       </ul>
       <p id="emptyMsg" class="muted">No workouts logged yet.</p>
     </section>
+
+    <section class="card">
+  <h2>Suggested Exercises</h2>
+  <label for="muscle">Select muscle group:</label>
+  <select id="muscle">
+    <option value="chest">Chest</option>
+    <option value="back">Back</option>
+    <option value="legs">Legs</option>
+    <option value="biceps">Biceps</option>
+    <option value="triceps">Triceps</option>
+  </select>
+  <ul id="exerciseList" class="log-list"></ul>
+</section>
   </main>
 
   <footer class="site-footer">
@@ -61,7 +74,33 @@
     </div>
   </footer>
 
-  <script>
+  <script type="module">
+    import "./script/utils.js";
+    import "./script/main.js";
+    import "./script/tracker.js";
+
+    import { fetchExercises } from "./script/api.js";
+
+  const muscleSelect = document.getElementById("muscle");
+  const exerciseList = document.getElementById("exerciseList");
+
+  async function loadExercises(muscle) {
+    exerciseList.innerHTML = "<li>Loading...</li>";
+    const exercises = await fetchExercises(muscle);
+    exerciseList.innerHTML = exercises.length
+      ? exercises
+          .slice(0, 5)
+          .map(
+            (ex) =>
+              `<li><strong>${ex.name}</strong> — ${ex.muscle}, ${ex.type}, ${ex.difficulty}</li>`
+          )
+          .join("")
+      : "<li>No exercises found.</li>";
+  }
+
+  muscleSelect.addEventListener("change", (e) => loadExercises(e.target.value));
+
+  loadExercises("chest"); // default
     // Placeholder: We'll add tracker.js in the next step to handle localStorage and rendering.
     document.getElementById('year2').textContent = new Date().getFullYear();
   </script>

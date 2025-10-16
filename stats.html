@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Stats — PulseForge</title>
+  <title>Stats — FireForged</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/animations.css">
 </head>
@@ -49,7 +49,10 @@
     </div>
   </footer>
 
-  <script>
+  <script type="module">
+  import "./script/utils.js";
+  import "./script/main.js";
+  import "./script/stats.js";
     // stats.js will populate these values later
     document.getElementById('year3').textContent = new Date().getFullYear();
   </script>

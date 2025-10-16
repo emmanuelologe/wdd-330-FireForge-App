@@ -173,3 +173,59 @@ footer {
   border-top: 1px solid var(--border-color);
   margin-top: auto;
 }
+
+.log-list {
+  list-style: none;
+  padding: 0;
+}
+
+.log-item {
+  background: var(--card-bg, #0a1a2a);
+  margin: 0.5rem 0;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete-btn {
+  background: transparent;
+  color: var(--accent-red, #ff4d4f);
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.progress-wrap {
+  width: 100%;
+  background: #1a2a45;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 12px;
+  margin-top: 0.5rem;
+}
+
+.progress {
+  height: 100%;
+  background: var(--accent-red, #ff4d4f);
+  width: 0;
+  border-radius: 8px;
+  transition: width 1s ease-in-out;
+}
+
+.muted {
+  font-size: 0.85rem;
+  color: #888;
+  font-style: italic;
+  margin-top: 0.25rem;
+}
+
+.quote-card {
+  text-align: center;
+  background: #1a2a45;
+  border-left: 4px solid var(--accent-color, #ff5722);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}

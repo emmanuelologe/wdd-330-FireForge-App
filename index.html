@@ -41,7 +41,7 @@
   </div>
 </section>
 
-    <section class="quote card" aria-live="polite">
+    <section class="quote-card" aria-live="polite">
       <h2>Motivational Quote</h2>
       <blockquote id="quote">"Loading inspiration..."</blockquote>
       <p class="muted">Quote provided by third-party API</p>
@@ -79,5 +79,17 @@
     document.getElementById('year').textContent = new Date().getFullYear();
     // In later steps we'll fetch a quote via api.js
   </script>
+  <script type="module">
+  import { fetchQuote } from './script/api.js';
+  import './script/main.js';
+  const quoteEl = document.getElementById("quote");
+
+  async function showQuote() {
+    const quote = await fetchQuote();
+    quoteEl.textContent = quote;
+  }
+
+  showQuote();
+</script>
 </body>
 </html>
