@@ -1,0 +1,44 @@
+/* ================================
+   animations.css — Subtle Motions
+   ================================ */
+
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.slide-up {
+  animation: slideUp 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ---------- Progress Bar ---------- */
+.progress-bar {
+  background: var(--card-bg);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  height: 10px;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  width: 0;
+  background: var(--accent-red);
+  transition: width 1s ease;
+}

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tracker — PulseForge</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body class="site-root">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">FireForged</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="stats.html">Stats</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <section class="card">
+      <h1>Workout Tracker</h1>
+      <form id="logForm" class="log-form" aria-label="Log a workout">
+        <label>
+          Exercise
+          <input id="exercise" name="exercise" type="text" placeholder="e.g. Push-ups" required>
+        </label>
+        <label>
+          Sets
+          <input id="sets" name="sets" type="number" min="1" value="3" required>
+        </label>
+        <label>
+          Reps
+          <input id="reps" name="reps" type="number" min="1" value="10" required>
+        </label>
+        <label>
+          Duration (mins)
+          <input id="duration" name="duration" type="number" min="0" value="10">
+        </label>
+        <div class="form-actions">
+          <button type="submit" class="btn">Add Workout</button>
+          <button type="button" id="clearBtn" class="btn ghost">Clear All</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card" aria-live="polite">
+      <h2>Logged Workouts</h2>
+      <ul id="logList" class="log-list">
+        <!-- dynamic list rendered here -->
+      </ul>
+      <p id="emptyMsg" class="muted">No workouts logged yet.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year2"></span> FireForged</p>
+    </div>
+  </footer>
+
+  <script>
+    // Placeholder: We'll add tracker.js in the next step to handle localStorage and rendering.
+    document.getElementById('year2').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

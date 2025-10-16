@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — PulseForge</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body class="site-root">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">PulseForge</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="tracker.html">Tracker</a>
+        <a href="stats.html">Stats</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <section class="card">
+      <h1>About FireForged</h1>
+      <p>FireForged is a minimal fitness tracking web app created for a web development final project. It demonstrates clean vanilla JavaScript, modern HTML semantics, accessible form controls, and subtle CSS animations. Built with a dark-blue palette and red accent for energy.</p>
+
+      <h2>Credits</h2>
+      <ul>
+        <li>Exercise data: API Ninjas (or local fallback)</li>
+        <li>Motivational quotes: Quotable / ZenQuotes</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year4"></span> FireForged</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year4').textContent = new Date().getFullYear();</script>
+</body>
+</html>

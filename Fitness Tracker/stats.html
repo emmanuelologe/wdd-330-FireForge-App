@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stats — PulseForge</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body class="site-root">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">FireForged</a>
+      <nav class="nav">
+        <a href="tracker.html">Tracker</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <section class="card">
+      <h1>Your Progress</h1>
+      <p class="lead">A simple summary of logged workouts.</p>
+
+      <div class="stat card">
+        <h3>Total Workouts</h3>
+        <div class="stat-value" id="totalWorkouts">0</div>
+      </div>
+
+      <div class="stat card">
+        <h3>Total Minutes</h3>
+        <div class="stat-value" id="totalMinutes">0</div>
+      </div>
+
+      <div class="card">
+        <h3>Weekly Goal Progress</h3>
+        <div class="progress-wrap">
+          <div class="progress" id="progressBar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year3"></span> FireForged</p>
+    </div>
+  </footer>
+
+  <script>
+    // stats.js will populate these values later
+    document.getElementById('year3').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

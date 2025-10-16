@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Fitness Tracker — log workouts, track progress, and stay motivated." />
+  <title>Fitness Tracker</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animation.css">
+</head>
+<body class="site-root">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Fitness Tracker Home">
+        <svg width="36" height="36" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" fill="var(--accent-red)" opacity="0.12"></circle>
+          <path d="M4 13c2-2 4-3 8-3s6 1 8 3" stroke="var(--brand-blue)" stroke-width="1.6" fill="none" stroke-linecap="round"></path>
+        </svg>
+        <span class="brand-text">FireForged</span>
+      </a>
+      <nav class="nav">
+        <a href="tracker.html">Tracker</a>
+        <a href="stats.html">Stats</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <section class="hero card">
+  <div class="hero-image">
+    <img src="images/hero.jpg" alt="Person working out in gym">
+  </div>
+  <div class="hero-text">
+    <h1>Track your workouts. Forge your pulse.</h1>
+    <p class="lead">Minimal, fast, and focused. Log workouts, discover exercises, and get a daily spark of motivation.</p>
+    <div class="hero-cta">
+      <a class="btn" href="tracker.html">Start Tracking</a>
+      <a class="btn ghost" href="stats.html">View Stats</a>
+    </div>
+  </div>
+</section>
+
+    <section class="quote card" aria-live="polite">
+      <h2>Motivational Quote</h2>
+      <blockquote id="quote">"Loading inspiration..."</blockquote>
+      <p class="muted">Quote provided by third-party API</p>
+    </section>
+
+    <section class="features">
+  <article class="feature card">
+    <img src="images/exercise1.jpg" alt="Dumbbell workout" class="feature-img">
+    <h3>Discover Exercises</h3>
+    <p>Browse exercises fetched from an exercise API and build custom workouts.</p>
+  </article>
+
+  <article class="feature card">
+    <img src="images/exercise2.jpg" alt="Logging workout data" class="feature-img">
+    <h3>Log Easily</h3>
+    <p>Quickly add reps, sets and duration. All saved locally in your browser.</p>
+  </article>
+
+  <article class="feature card">
+    <img src="images/exercise3.jpg" alt="Progress stats graph" class="feature-img">
+    <h3>Track Progress</h3>
+    <p>Animated progress bars and simple stats give you clarity on gains.</p>
+  </article>
+</section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> FireForged — Built with Fire</p>
+    </div>
+  </footer>
+
+  <script>
+    // Small inline script for year & demo quote placeholder.
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // In later steps we'll fetch a quote via api.js
+  </script>
+</body>
+</html>
